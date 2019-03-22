@@ -83,9 +83,15 @@ body {
     color: #777;
     display: inline-block;
     padding: 0.9375rem 2.5rem;
+    position: relative;
     text-decoration: none;
     text-transform: uppercase;
     transition: all .2s;
+}
+
+.btn-animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
 }
 
 .btn:hover {
@@ -101,6 +107,28 @@ body {
 .btn-white {
     background-color: #FFF;
     color: #777;
+}
+
+.btn::after {
+    border-radius: 6.25rem;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.4s;
+    width: 100%;
+    z-index: -1;
+}
+
+.btn-white::after {
+    background-color: #FFF;
+}
+
+.btn:hover::after {
+    opacity: 0;
+    transform: scaleX(1.4) scaleY(1.6);
 }
 
 @keyframes moveInLeft {
@@ -122,15 +150,23 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(6.25rem);
-    }
-
-    80%{
-        transform: translateX(-1.125rem);
+        transform: translateX(1.875rem);
     }
 
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(6.25rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
