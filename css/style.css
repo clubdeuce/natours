@@ -42,7 +42,7 @@ body {
   transform: translate(-50%, -50%); }
 
 .heading-primary {
-  color: #FFF;
+  color: #fff;
   margin-bottom: 6rem;
   text-transform: uppercase; }
 
@@ -85,7 +85,7 @@ body {
   transform: translateY(-0.1rem); }
 
 .btn--white {
-  background-color: #FFF;
+  background-color: #fff;
   color: #777; }
 
 .btn::after {
@@ -101,7 +101,7 @@ body {
   z-index: -1; }
 
 .btn--white::after {
-  background-color: #FFF; }
+  background-color: #fff; }
 
 .btn:hover::after {
   opacity: 0;
