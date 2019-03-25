@@ -1,5 +1,4 @@
 .row {
-    background-color: #eee;
     margin: 0 auto;
     max-width: $grid-width;
 
@@ -12,7 +11,6 @@
     /* An attribute selector, using syntax similar to regular expressions */
     /* see https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors */
     [class^="col-"] {
-        background-color: orangered;
         float: left;
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
